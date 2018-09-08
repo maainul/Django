@@ -5,5 +5,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', include('music.urls')),
+    url(r'^', include('music.urls')),
+    #url(r'^$', include('music.urls')),# it is not working
+    url(r'^music/', include('music.urls')),
 ]
