@@ -13,6 +13,7 @@ def index(request):
 
 def detail(request,album_id):#album_id is like a variable
 	#return HttpResponse("<h1>Details for album id:" +str(album_id)+ "</h1>")
+	# this is for Http404 error 
 	try:
 		album = Album.objects.get(pk =album_id)
 	except Album.DoesNotExist:
